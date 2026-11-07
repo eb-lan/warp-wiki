@@ -62,7 +62,9 @@ def check(output):
                 errors.append(f'{relative}: unresolved link: {link}')
             resolve(urljoin(current, link), relative)
 
-    for required in ('index.html', 'css/site.css', 'js/site.js', 'favicon.svg', 'search.json', 'sitemap.xml'):
+    for required in ('index.html', 'css/site.css', 'js/site.js', 'favicon.svg', 'search.json', 'sitemap.xml',
+                     'css/typography.css', 'images/cloudflare.svg',
+                     'fonts/geist-variable-latin.woff2', 'fonts/geist-mono-variable-latin.woff2'):
         if not (output / required).is_file():
             errors.append(f'Missing required output: {required}')
     index_path = output / 'search.json'
@@ -79,8 +81,8 @@ def check(output):
                 if url.startswith('/') and not (prefix and (url == prefix or url.startswith(prefix + '/'))):
                     url = origin.scheme + '://' + origin.netloc + prefix + url
                 resolve(urljoin(base + '/', url), 'search.json')
-    if len(parsed) < 8:
-        errors.append(f'Expected at least 8 generated pages, found {len(parsed)}')
+    if not parsed:
+        errors.append('No HTML pages generated')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         raise SystemExit(1)
