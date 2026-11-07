@@ -54,3 +54,19 @@ body { font-family: var(--font); font-size: 1rem; line-height: 1.65; font-synthe
 @media(max-width: 767px) {
   .prose { font-size: 1rem; }
 }
+
+/* Local Font Awesome platform marks; inherit the current theme's accent. */
+.prose h2:is(#android, #windows, #ios, #macos)::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+  vertical-align: -.08em;
+  background: var(--accent);
+  -webkit-mask: var(--platform-icon) center / contain no-repeat;
+  mask: var(--platform-icon) center / contain no-repeat;
+}
+.prose h2#android { --platform-icon: url('../icons/android.svg'); }
+.prose h2#windows { --platform-icon: url('../icons/windows.svg'); }
+.prose h2:is(#ios, #macos) { --platform-icon: url('../icons/apple.svg'); }

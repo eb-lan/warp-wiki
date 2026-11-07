@@ -1,4 +1,6 @@
 <nav class="navigation" aria-label="Документация">
   <p class="nav-caption">НАЧАЛО РАБОТЫ</p>
   <a class="nav-link{% if page.url == '/' %} current{% endif %}" href="{{ base_url }}/"{% if page.url == '/' %} aria-current="page"{% endif %}><span class="nav-symbol" aria-hidden="true">⌂</span>Введение</a>
+  <a class="nav-link{% if page.url == '/russia/' %} current{% endif %}" href="{{ base_url }}/russia/"{% if page.url == '/russia/' %} aria-current="page"{% endif %}><span class="nav-symbol" aria-hidden="true">◇</span>Подключение в России</a>
+  <a class="nav-link{% if page.url == '/clients/' %} current{% endif %}" href="{{ base_url }}/clients/"{% if page.url == '/clients/' %} aria-current="page"{% endif %}><span class="nav-symbol" aria-hidden="true">▤</span>Клиенты AmneziaWG</a>
 </nav>
