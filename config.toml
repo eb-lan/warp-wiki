@@ -1,6 +1,6 @@
 title = "warp-wiki"
 description = "Что такое Cloudflare WARP, как он работает и почему не меняет страну."
-base_url = "https://eb-lan.github.io/warp-wiki"
+base_url = "https://eb-lan.github.io/warp-wiki.github.io"
 default_language = "ru"
 
 [plugins]
