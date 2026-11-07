@@ -1,0 +1,20 @@
+{% include "head.html" %}
+<main id="main" class="main home" tabindex="-1">
+  <div class="breadcrumb"><span>Документация</span><span aria-hidden="true">/</span><span>Введение</span></div>
+  <div class="home-heading"><span class="eyebrow"><span class="status-dot"></span> WARP KNOWLEDGE BASE</span><span class="heading-index" aria-hidden="true">[ 01 — ОБЗОР ]</span></div>
+  <h1>Добро пожаловать<br>в <span class="accent-word">warp-wiki<span class="hero-dot">.</span></span></h1>
+  <p class="hero-description">Место, где знания обретают структуру.<br>Руководства, инструкции и полезные заметки — под рукой.</p>
+  <div class="hero-actions"><a class="button primary" href="{{ base_url }}/guides/quick-start/">Быстрый старт <span aria-hidden="true">→</span></a><a class="button secondary" href="https://github.com/eb-lan/warp-wiki.github.io">Открыть на GitHub <span aria-hidden="true">↗</span></a></div>
+  <div class="home-divider"><span>ОТ ОТВЕТА ВАС ОТДЕЛЯЕТ ОДИН РАЗДЕЛ</span><span aria-hidden="true">↓</span></div>
+  <div class="cards">
+    <a class="card" href="{{ base_url }}/guides/quick-start/"><span class="card-top"><span class="card-icon" aria-hidden="true">↗</span><span class="card-number">01</span></span><h2>Быстрый старт</h2><p>Освойтесь в wiki и подготовьте первую страницу документации.</p><span class="card-bottom">Начать знакомство <span aria-hidden="true">→</span></span></a>
+    <a class="card" href="{{ base_url }}/guides/writing/"><span class="card-top"><span class="card-icon" aria-hidden="true">▤</span><span class="card-number">02</span></span><h2>Добавление статей</h2><p>Организуйте разделы и пополняйте базу знаний обычными Markdown-файлами.</p><span class="card-bottom">Перейти к руководству <span aria-hidden="true">→</span></span></a>
+    <a class="card" href="{{ base_url }}/guides/markdown/"><span class="card-top"><span class="card-icon code-icon" aria-hidden="true">&lt;/&gt;</span><span class="card-number">03</span></span><h2>Форматирование</h2><p>Заголовки, таблицы, ссылки и примеры кода для понятных инструкций.</p><span class="card-bottom">Открыть примеры <span aria-hidden="true">→</span></span></a>
+    <a class="card" href="{{ base_url }}/reference/deployment/"><span class="card-top"><span class="card-icon" aria-hidden="true">↑</span><span class="card-number">04</span></span><h2>Публикация</h2><p>От изменений в репозитории до обновления сайта на GitHub Pages.</p><span class="card-bottom">Как это работает <span aria-hidden="true">→</span></span></a>
+  </div>
+  <div class="prose home-prose">{{ content | safe }}</div>
+  <div class="search-hint"><span class="hint-icon" aria-hidden="true">⌕</span><div><strong>Знаете, что ищете?</strong><span>Откройте поиск и найдите нужную страницу.</span></div><button type="button" data-hwaro-search aria-label="Открыть поиск"><kbd>Ctrl</kbd> + <kbd>K</kbd><span class="hint-arrow" aria-hidden="true">↗</span></button></div>
+  <div class="page-bottom"><span>Знания растут вместе с проектом.</span><a href="https://github.com/eb-lan/warp-wiki.github.io/edit/main/content/_index.md">Редактировать страницу ↗</a></div>
+</main>
+<aside class="toc" aria-label="На этой странице"><p class="toc-title">НА ЭТОЙ СТРАНИЦЕ</p>{{ toc | safe }}<div class="toc-note"><span aria-hidden="true">✦</span><strong>Ваша база знаний</strong><p>Дополняйте wiki.<br>Делитесь опытом.<br>Сохраняйте полезное.</p></div></aside>
+{% include "foot.html" %}
