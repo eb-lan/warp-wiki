@@ -4,6 +4,8 @@
   {% elif page.url == '/russia/' %}
   <a href="{{ base_url }}/">← Введение</a><a href="{{ base_url }}/clients/">Клиенты AmneziaWG →</a>
   {% elif page.url == '/clients/' %}
-  <a href="{{ base_url }}/russia/">← Подключение в России</a>
+  <a href="{{ base_url }}/russia/">← Подключение в России</a><a href="{{ base_url }}/relay/">Relay-серверы →</a>
+  {% elif page.url == '/relay/' %}
+  <a href="{{ base_url }}/clients/">← Клиенты AmneziaWG</a>
   {% endif %}
 </nav>
